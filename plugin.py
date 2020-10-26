@@ -68,6 +68,7 @@ basepath = "/tmp/mocAPP_cache_blender/"
 
 
 def get_bvh(url, token):
+    # TODO: 1 - get id not url, 2 - offer options to smoothen the file
     r = requests.get(url)
     d = r.headers['content-disposition']
     fname = re.findall("filename=(.+)", d)[0]

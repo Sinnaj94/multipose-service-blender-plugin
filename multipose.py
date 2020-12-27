@@ -55,7 +55,7 @@ def get_url_for_name(name):
 class ImportLastBVHOperator(bpy.types.Operator):
     """Imports last BVH File sent by MocAPP"""
     bl_idname = "object.import_last_bvh"
-    bl_label = "mocAPP - Insert recorded character"
+    bl_label = "Multipose - Load recorded character"
 
 
     recording = bpy.props.EnumProperty(items=get_files_list, name="Recorded Animation", description="Choose your animation that should be loaded.")

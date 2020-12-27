@@ -6,7 +6,7 @@ import atexit
 from math import pi
 import requests
 bl_info = {
-    "name": "Import BVH over Network",
+    "name": "Multipose Blender Plugin",
     "blender": (2, 80, 0),
     "category": "Import-Export",
 }

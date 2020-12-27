@@ -136,9 +136,15 @@ class MessageBoxOperator(bpy.types.Operator):
         self.report({'INFO'}, "This is a test")
         return {'FINISHED'}
 
+
+def menu_function(self, context):
+    self.layout.operator(ImportLastBVHOperator.bl_idname)
+
+
 def register():
     bpy.utils.register_class(ImportLastBVHOperator)
     bpy.utils.register_class(MessageBoxOperator)
+    bpy.types.VIEW3D_MT_object.append(menu_function)
 
 
 def unregister():
@@ -210,13 +216,9 @@ def stop_server():
     print("Stopping the socket.")
     _is_running = False
 
-
 # run a server thread.
 t = threading.Thread(target=run_server)
 t.daemon = True
 t.start()
 
 atexit.register(stop_server)
-
-if __name__ == "__main__":
-    register()

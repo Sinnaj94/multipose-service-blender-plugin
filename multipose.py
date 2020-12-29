@@ -19,7 +19,7 @@ HOST = '0.0.0.0'
 PORT = 65432
 _is_running = True
 basepath = "./mocAPP_cache_blender/"
-model_path = "./models"
+model_path = "/models"
 
 char = [
     ("empty", "Only Skeleton", ""),
